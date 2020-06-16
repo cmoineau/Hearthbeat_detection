@@ -9,11 +9,9 @@ Basically, the goal of this project is to get the index of every R-peaks on an E
 You can take a look at this [wikipedia link](https://en.wikipedia.org/wiki/Electrocardiography) for more details on ECG. 
 
 ## The algorithm :
-Two parameters : initial max and filter parameter.
-Initial max : Initialise the slope threshold, if too low you will detect a lot of small peaks if to high you will not detect any peaks.
-Filter parameter : A value to adjust the new initial max once you have found a new peak.
 
-The algorithm seek R peaks by looking at the variation of the slope
+The algorithm work by looking at the slope of the signal. We use the "initial max" parameter to set a threshold the slope will have to cross. This "initial max" parameter is updated every time we find a peak usign a "filter" parameter.
+
 ## Result :
 
 ![result](./result.png)
